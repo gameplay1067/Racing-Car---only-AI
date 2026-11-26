@@ -1,0 +1,77 @@
+{
+  "name": "ultimate-racing-desktop",
+  "version": "2.0.1",
+  "private": true,
+  "description": "ULTIMATE RACING - Next.js static app with Electron Windows desktop wrapper",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "desktop": "npm run build && electron .",
+    "dist:win": "npm run build && electron-builder --win nsis --x64",
+    "dist:win:portable": "npm run build && electron-builder --win portable --x64",
+    "lint": "tsc --noEmit",
+    "qa:static": "node scripts/qa-static.mjs",
+    "qa:settings": "node scripts/qa-settings.mjs",
+    "qa": "npm run qa:static && npm run qa:drift && npm run qa:settings && npm run qa:driving && npm run qa:physics && npm run qa:classification && npm run qa:balance && npm run qa:economy && npm run qa:guardrail && npm run qa:shop && npm run qa:sim && npm run qa:soak && npm run qa:v2",
+    "qa:driving": "node scripts/qa-driving.mjs",
+    "qa:balance": "node scripts/qa-balance.mjs",
+    "qa:shop": "node scripts/qa-shop-ui.mjs",
+    "qa:economy": "node scripts/qa-economy.mjs",
+    "qa:guardrail": "node scripts/qa-guardrail.mjs",
+    "qa:sim": "node scripts/simulate-races.mjs",
+    "qa:physics": "node scripts/qa-physics.mjs",
+    "qa:soak": "node scripts/soak-physics.mjs",
+    "qa:classification": "node scripts/qa-classification.mjs",
+    "qa:v2": "node scripts/qa-v2.mjs",
+    "qa:drift": "node scripts/qa-drift-body.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "38.2.2",
+    "electron-builder": "26.0.12",
+    "typescript": "5.9.2",
+    "@types/node": "22.18.6",
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
+    "next": "15.5.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "build": {
+    "appId": "com.ultimateracing.desktop",
+    "productName": "ULTIMATE RACING",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "ULTIMATE-RACING-Setup-${version}.${ext}",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "ULTIMATE RACING"
+    },
+    "portable": {
+      "artifactName": "ULTIMATE-RACING-Portable-${version}.${ext}"
+    }
+  }
+}

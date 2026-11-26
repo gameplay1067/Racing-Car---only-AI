@@ -1,0 +1,35 @@
+{
+  "name": "ULTIMATE RACING",
+  "version": "2.0.1",
+  "build": "2.0.1",
+  "date": "2026-11-24",
+  "changes": [
+    "Fixed the player drift chassis rotation: apply the calculated drift yaw to the visible 3D car body, align camera and collision envelope to that body heading, and smooth drift entry/recovery.",
+    "Separated guardrail proximity from impact: approaching or running alongside the rail does not brake the car; crossing the road edge while moving outward creates an impact-scaled speed loss, cooldown and inward yaw response.",
+    "Removed artificial per-frame tyre-scrub speed subtraction from ordinary cornering; lateral traction utilization now reduces available drive force smoothly only near the grip threshold, without a corner-specific fixed speed cap.",
+    "Improved Easy AI behaviour: rivals detect a closing player in the same corridor and yield toward available lateral space; collision laws remain shared across all difficulties.",
+    "Added selectable and persistent Normal/Ghost AI vehicle mode for Grand Prix. Ghost mode makes AI vehicles translucent and disables racer-to-racer collisions only; road-edge constraints and route progress continue.",
+    "Recalibrated drift steering between the former twitchy and overly heavy configurations using 1.50 yaw authority, 0.31s drift response and 0.22 lateral slip.",
+    "Reworked speed HUD formatting from the measured current m/s value; invalid or stopped values display 000 km/h and are not confused with a vehicle top-speed stat.",
+    "Added finish-position GP payouts for every finisher, +50-coin top-ten bonus, completion/win/round bonuses and idempotent run settlement; DNFs receive no completion payout.",
+    "Preserved existing car/economy data and added regression coverage for Ghost Mode persistence/visual restoration, road-edge contact, AI yielding, speed HUD and drift response."
+  ],
+  "features": [
+    "Player chassis now visibly rotates 0.34–0.43 radians into a drift, with smoothed 0.14s entry and 0.22s recovery; Canvas fallback uses the same stronger body-turn feedback.",
+    "20 vehicles: 10 original free models and 10 purchasable models priced at 200–2,000 coins",
+    "Unified player/AI collision impulse response and swept two-axis collision detection",
+    "Fixed 120 Hz simulation timestep with bounded catch-up steps",
+    "Continuous corner traction and tyre scrub without a hard 277 km/h corner speed cap",
+    "No speed penalty from guardrail proximity; physical edge contact remains active",
+    "Heavier drift steering and increased drift charge rate",
+    "Actual Grand Prix finish classification and persistent career standings",
+    "Unlimited daily AI Grand Prix entries and winner settlements with duplicate-run protection",
+    "Time Attack minimum reward of 80 coins with a 30% +40 coin bonus chance",
+    "Time Attack BONUS REWARD feedback with animated result panel and coin pickup sound",
+    "Grand Prix AI Vehicle Mode: persistent Normal and translucent Ghost modes; Ghost disables racer-to-racer collision only",
+    "Easy AI player-yielding behaviour to create passing space without changing collision physics",
+    "Position-based Grand Prix coin rewards for all finishers plus top-ten, completion and win bonuses",
+    "Impact-severity-scaled guardrail collision response with no proximity braking",
+    "Current-speed HUD safely shows 000 km/h when stopped or invalid"
+  ]
+}

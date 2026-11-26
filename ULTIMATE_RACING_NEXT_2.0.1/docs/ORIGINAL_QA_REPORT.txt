@@ -1,0 +1,95 @@
+ULTIMATE RACING — PHASE 6 QA REPORT
+===================================
+Build: Phase 6 final candidate
+Scope: vehicle physics sanity, 25-car AI race logic, AI contact response, 20 track geometries, UI structure, Chromium WebGL capability.
+
+1) SOURCE / HTML CHECKS
+-----------------------
+- JavaScript module syntax: PASS (node --check)
+- Module script count: 1
+- HTML IDs: 95
+- Duplicate IDs: 0
+- Static DOM references: 91
+- Missing referenced DOM IDs: 0
+- Track entries: 20
+- WebGL failure overlay: present
+- Runtime diagnostics API: present
+
+2) 100 DETERMINISTIC AI RACE SIMULATIONS
+---------------------------------------
+- Races simulated: 100
+- Track coverage: all 20 tracks, 5 scenarios per track
+- Race field: 25 (1 player proxy + 24 AI)
+- Laps: 2 and 3
+- AI difficulty: Easy, Normal, Hard, Expert, plus Normal repeat
+- AI finishes: 2,400 / 2,400 (100%)
+- AI update frames: 382,242
+- Simulation time step: 0.2 seconds
+- Total simulated race time: 76,448.4 seconds
+- Average simulated race duration: 764.5 seconds
+- Lane changes: 83,785
+- Collision solver correction hits across up to five passes: 89,538
+- Residual close/overlap pair observations after correction: 1,434
+- Maximum simultaneous residual pair observations in one frame: 7
+- Maximum AI speed observed: 99 m/s (clamped)
+- Maximum AI lateral offset: 7.4 m (clamped)
+- Invalid / non-finite AI positions, speeds or lane offsets: 0
+
+Important interpretation:
+The 100 runs are deterministic logic simulations of the race/AI update system, not 100 full 3D browser play sessions. The 89,538 figure counts solver correction hits over five separation passes, not unique real-world impacts. 1,434 residual pair observations remained in very crowded situations, so the solver improves traffic separation but does not guarantee perfectly collision-free racing.
+
+3) PLAYER PHYSICS SANITY CHECKS
+-------------------------------
+- Controlled drift speed retention: 95.08% of the nominal 91 m/s baseline.
+- Nitro accumulated during 20-second drift test: 100% meter (clamped at max).
+- Player safe lateral road offset: 8.5 m maximum.
+- Barrier contact events during deliberate full-steer boundary test: 948 (boundary held at 8.5 m; events are repeated test contacts, not race crashes).
+
+4) TRACK GEOMETRY / TARGET LAP TIME
+-----------------------------------
+- Tracks checked: 20 / 20.
+- Centerline crossings: 0.
+- Track length range: 25,600 m to 26,400 m.
+- Minimum sampled non-local centerline clearance: 141.04 m.
+- Estimated nominal one-lap time from track corner-factor profile at the 91 m/s baseline: 294.2 s to 299.3 s (about 4:54 to 4:59); mean 296.5 s (about 4:57).
+- These lap figures are geometric / nominal estimates, not measured times from actual human gameplay.
+
+5) BROWSER LAYOUT CHECKS
+------------------------
+Chromium static-layout check with game script omitted (to isolate the HTML/CSS layer):
+- 1440 x 900: document fits viewport, main menu visible, 7 main buttons, no duplicate IDs.
+- 1280 x 720: document fits viewport, main menu visible, 7 main buttons, no duplicate IDs.
+- 1920 x 1080: document fits viewport, main menu visible, 7 main buttons, no duplicate IDs.
+- 390 x 844: document fits viewport, main menu visible, 7 main buttons, no duplicate IDs.
+This checks the static UI layout only; it does not validate the live 3D canvas or interactions.
+
+6) CHROMIUM WEBGL2 TEST
+-----------------------
+- Browser: Chromium 144.0.7559.96.
+- Environment: Xvfb + ANGLE SwiftShader software renderer.
+- WebGL 2.0 context creation: PASS.
+- GLSL ES 3.00 vertex / fragment shader compile: PASS.
+- Program link: PASS.
+- Vertex buffer + VAO + triangle draw: PASS.
+- gl.getError(): 0 (NO_ERROR).
+- Renderer: ANGLE / Vulkan SwiftShader Device (Subzero).
+
+What could not be completed:
+The actual Ultimate Racing page imports Three.js 0.160.0 from jsDelivr, with unpkg as fallback. The container could not resolve the external CDN host, and Chromium's local-page navigation was blocked by the environment policy. Therefore the actual Three.js game scene could not be loaded and played end-to-end in this container. The WebGL2 probe confirms that Chromium can create a working WebGL2 context under SwiftShader, but it is not proof that the entire game renders correctly or achieves 60 FPS on the user's GPU.
+
+7) PHASE 6 FIXES APPLIED
+------------------------
+- AI decisions now read one same-frame traffic snapshot; no rival is updated using an inconsistent mix of old/new positions.
+- AI-to-AI contact handling re-checks up to five separation passes, applies lateral separation and makes the trailing vehicle yield when lateral movement is blocked.
+- Player lateral movement is clamped inside a safe road envelope that accounts for car width.
+- Minimap path geometry is cached instead of regenerated each frame.
+- Garage preview renderer is lazy-initialized to avoid allocating a second WebGL context at initial load.
+- Adaptive quality lowers DPR / shadows after sustained low FPS and restores them after stable FPS windows.
+- Browser tab visibility / blur clears held inputs and pauses the race.
+- A visible fallback message is now shown when WebGL initialization fails.
+
+FINAL STATUS
+------------
+Code and deterministic simulation checks: PASS.
+Chromium WebGL2 capability probe: PASS under SwiftShader.
+Full real-time Three.js gameplay test in this container: NOT VERIFIED due CDN/network and navigation restrictions.

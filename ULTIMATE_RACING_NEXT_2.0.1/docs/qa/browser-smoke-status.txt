@@ -1,0 +1,6 @@
+Chromium headless smoke attempt for ULTIMATE RACING 2.0.0 (2026-11-24): NOT COMPLETED.
+- Served the game source locally over HTTP and attempted headless Chromium DOM capture.
+- The WebGL-enabled run failed EGL/SwiftANGLE initialization in the container.
+- A second no-GPU DOM-capture attempt also exceeded the 25-second command timeout and produced no DOM output.
+- Therefore the 3D renderer, actual menu clicks, AI Ghost Mode appearance in the rendered scene, live collision behaviour and FPS/GPU metrics remain unverified.
+- Source-level, VM helper, deterministic subsystem, economics, classification and virtual-time physics tests are recorded in automated-qa-log.txt and physics-soak-1hour-virtual.json.

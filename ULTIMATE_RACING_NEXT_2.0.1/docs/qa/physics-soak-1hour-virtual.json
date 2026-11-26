@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "testType": "Virtual one-hour 120Hz physics helper soak; NOT a live browser/Three.js session",
+  "virtualDrivingSeconds": 3600,
+  "fixedTimestepHz": 120,
+  "physicsTicks": 432000,
+  "collisionImpulseChecks": 3600,
+  "sweptPlanarChecks": 3600,
+  "sweptPlanarHits": 3600,
+  "driftTicks": 143936,
+  "driftSharePct": 33.32,
+  "actualRoadEdgeContacts": 758,
+  "guardrailProximityChecks": 60,
+  "guardrailContactAndCooldownChecks": 60,
+  "speedRangeMs": {
+    "min": 0.2792,
+    "max": 106
+  },
+  "peakSpeedKmh": 381.6,
+  "finalDriftGauge": 1,
+  "wallClockSeconds": 1.088,
+  "cpuSeconds": 1.159,
+  "heapUsedBeforeMB": 5.16,
+  "heapUsedAfterMB": 6.73,
+  "caveat": "Exercises production traction, two-axis swept collision, collision impulse and road-edge response helpers inside a deterministic synthetic S-curve driver. It does not load the full scene, Three.js renderer, browser UI, full AI traffic solver, assets, GPU or persistent browser storage."
+}

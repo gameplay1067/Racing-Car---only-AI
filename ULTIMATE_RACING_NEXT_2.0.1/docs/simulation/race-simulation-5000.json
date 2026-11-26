@@ -1,0 +1,982 @@
+{
+  "status": "PASS",
+  "simulationType": "Headless time-stepped kinematic race model using production CAR_DATA, CAR_PROFILES, BASE_PERFORMANCE and ability identifiers. It models acceleration, top speed, corner speed, drift charge, nitro and vehicle-specific abilities; it does not run the Three.js renderer, player input, scenery collision or the full in-game traffic solver.",
+  "actualRacesExecuted": 5000,
+  "productionSourceVersion": "2.0.0",
+  "deterministicSeed": "0x81a7c0de",
+  "simulationWallClockSeconds": 11.37,
+  "simulatedRaceTimeSeconds": 2365258,
+  "routeCountRange": "2–20 tracks, randomly sampled",
+  "timestepSeconds": 0.5,
+  "entrantCount": 25,
+  "difficultyDistribution": {
+    "normal": 3000,
+    "hard": 1240,
+    "easy": 500,
+    "expert": 260
+  },
+  "byDifficulty": {
+    "normal": {
+      "races": 3000,
+      "wins": 2418,
+      "podiums": 2926,
+      "playerWinRatePct": 80.6,
+      "podiumRatePct": 97.53
+    },
+    "hard": {
+      "races": 1240,
+      "wins": 948,
+      "podiums": 1164,
+      "playerWinRatePct": 76.45,
+      "podiumRatePct": 93.87
+    },
+    "easy": {
+      "races": 500,
+      "wins": 500,
+      "podiums": 500,
+      "playerWinRatePct": 100,
+      "podiumRatePct": 100
+    },
+    "expert": {
+      "races": 260,
+      "wins": 141,
+      "podiums": 218,
+      "playerWinRatePct": 54.23,
+      "podiumRatePct": 83.85
+    }
+  },
+  "sampledRouteCounts": {
+    "2": 254,
+    "3": 265,
+    "4": 264,
+    "5": 264,
+    "6": 262,
+    "7": 303,
+    "8": 265,
+    "9": 261,
+    "10": 259,
+    "11": 255,
+    "12": 280,
+    "13": 261,
+    "14": 269,
+    "15": 256,
+    "16": 262,
+    "17": 240,
+    "18": 276,
+    "19": 262,
+    "20": 242
+  },
+  "player": {
+    "wins": 4007,
+    "winRatePct": 80.14,
+    "topThree": 4808,
+    "podiumRatePct": 96.16,
+    "averageFinishSeconds": 473.05,
+    "timeoutRaces": 0
+  },
+  "fieldWinners": {
+    "freeVehicleWins": 2308,
+    "premiumVehicleWins": 2692
+  },
+  "vehicles": [
+    {
+      "id": "UR-X01",
+      "name": "PULSE",
+      "price": 0,
+      "playerStarts": 250,
+      "playerWins": 226,
+      "playerWinRatePct": 90.4,
+      "playerAverageFinishSeconds": 454.91,
+      "playerWinRateByDifficulty": {
+        "normal": {
+          "starts": 150,
+          "winRatePct": 90,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 472.15
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 91.94,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 418.66
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 452.4
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 69.23,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 433.69
+        }
+      },
+      "fieldStarts": 6244,
+      "fieldWins": 237,
+      "fieldWinRatePct": 3.8,
+      "fieldAverageFinishSeconds": 488.57,
+      "observedMaxSpeedMs": 109.08,
+      "averageInitialAccelerationMs2": 34.2,
+      "averageDriftChargePerRace": 10.747,
+      "abilityActivations": 0,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X02",
+      "name": "VORTEX",
+      "price": 0,
+      "playerStarts": 250,
+      "playerWins": 248,
+      "playerWinRatePct": 99.2,
+      "playerAverageFinishSeconds": 470.97,
+      "playerWinRateByDifficulty": {
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 424.84
+        },
+        "normal": {
+          "starts": 150,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 491.28
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 84.62,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 418.73
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 451.4
+        }
+      },
+      "fieldStarts": 6229,
+      "fieldWins": 319,
+      "fieldWinRatePct": 5.12,
+      "fieldAverageFinishSeconds": 488.96,
+      "observedMaxSpeedMs": 109.62,
+      "averageInitialAccelerationMs2": 33.49,
+      "averageDriftChargePerRace": 11.713,
+      "abilityActivations": 0,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X03",
+      "name": "TEMPEST",
+      "price": 0,
+      "playerStarts": 250,
+      "playerWins": 250,
+      "playerWinRatePct": 100,
+      "playerAverageFinishSeconds": 474.79,
+      "playerWinRateByDifficulty": {
+        "normal": {
+          "starts": 150,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 473.2
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 510.56
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 438.04
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 414.7
+        }
+      },
+      "fieldStarts": 6213,
+      "fieldWins": 344,
+      "fieldWinRatePct": 5.54,
+      "fieldAverageFinishSeconds": 490.46,
+      "observedMaxSpeedMs": 109.62,
+      "averageInitialAccelerationMs2": 35.02,
+      "averageDriftChargePerRace": 11.873,
+      "abilityActivations": 0,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X04",
+      "name": "PHANTOM",
+      "price": 0,
+      "playerStarts": 250,
+      "playerWins": 60,
+      "playerWinRatePct": 24,
+      "playerAverageFinishSeconds": 473.01,
+      "playerWinRateByDifficulty": {
+        "normal": {
+          "starts": 150,
+          "winRatePct": 21.33,
+          "podiumRatePct": 90.67,
+          "averageFinishSeconds": 472.44
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 4.84,
+          "podiumRatePct": 79.03,
+          "averageFinishSeconds": 473.1
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 451.62
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 0,
+          "podiumRatePct": 15.38,
+          "averageFinishSeconds": 520.31
+        }
+      },
+      "fieldStarts": 6331,
+      "fieldWins": 60,
+      "fieldWinRatePct": 0.95,
+      "fieldAverageFinishSeconds": 492.56,
+      "observedMaxSpeedMs": 108,
+      "averageInitialAccelerationMs2": 34.28,
+      "averageDriftChargePerRace": 8.416,
+      "abilityActivations": 0,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X05",
+      "name": "APEX",
+      "price": 0,
+      "playerStarts": 250,
+      "playerWins": 50,
+      "playerWinRatePct": 20,
+      "playerAverageFinishSeconds": 471.68,
+      "playerWinRateByDifficulty": {
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 419.12
+        },
+        "normal": {
+          "starts": 150,
+          "winRatePct": 15.33,
+          "podiumRatePct": 87.33,
+          "averageFinishSeconds": 465.9
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 3.23,
+          "podiumRatePct": 59.68,
+          "averageFinishSeconds": 491.13
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 0,
+          "podiumRatePct": 7.69,
+          "averageFinishSeconds": 546.65
+        }
+      },
+      "fieldStarts": 6315,
+      "fieldWins": 50,
+      "fieldWinRatePct": 0.79,
+      "fieldAverageFinishSeconds": 494.53,
+      "observedMaxSpeedMs": 108,
+      "averageInitialAccelerationMs2": 33.96,
+      "averageDriftChargePerRace": 8.768,
+      "abilityActivations": 0,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X06",
+      "name": "NOVA",
+      "price": 0,
+      "playerStarts": 250,
+      "playerWins": 228,
+      "playerWinRatePct": 91.2,
+      "playerAverageFinishSeconds": 461.01,
+      "playerWinRateByDifficulty": {
+        "hard": {
+          "starts": 62,
+          "winRatePct": 91.94,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 479.53
+        },
+        "normal": {
+          "starts": 150,
+          "winRatePct": 94,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 452.64
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 455.74
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 38.46,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 479.35
+        }
+      },
+      "fieldStarts": 6254,
+      "fieldWins": 242,
+      "fieldWinRatePct": 3.87,
+      "fieldAverageFinishSeconds": 489.94,
+      "observedMaxSpeedMs": 109.08,
+      "averageInitialAccelerationMs2": 34.55,
+      "averageDriftChargePerRace": 10.899,
+      "abilityActivations": 0,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X07",
+      "name": "TITAN",
+      "price": 0,
+      "playerStarts": 250,
+      "playerWins": 250,
+      "playerWinRatePct": 100,
+      "playerAverageFinishSeconds": 477.55,
+      "playerWinRateByDifficulty": {
+        "normal": {
+          "starts": 150,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 488.66
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 435.32
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 378.69
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 567.02
+        }
+      },
+      "fieldStarts": 6245,
+      "fieldWins": 399,
+      "fieldWinRatePct": 6.39,
+      "fieldAverageFinishSeconds": 487.15,
+      "observedMaxSpeedMs": 109.89,
+      "averageInitialAccelerationMs2": 34.41,
+      "averageDriftChargePerRace": 12.102,
+      "abilityActivations": 0,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X08",
+      "name": "MIRAGE",
+      "price": 0,
+      "playerStarts": 250,
+      "playerWins": 58,
+      "playerWinRatePct": 23.2,
+      "playerAverageFinishSeconds": 498.17,
+      "playerWinRateByDifficulty": {
+        "normal": {
+          "starts": 150,
+          "winRatePct": 19.33,
+          "podiumRatePct": 92,
+          "averageFinishSeconds": 504.67
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 6.45,
+          "podiumRatePct": 67.74,
+          "averageFinishSeconds": 520.06
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 449.92
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 0,
+          "podiumRatePct": 38.46,
+          "averageFinishSeconds": 411.54
+        }
+      },
+      "fieldStarts": 6343,
+      "fieldWins": 58,
+      "fieldWinRatePct": 0.91,
+      "fieldAverageFinishSeconds": 491.06,
+      "observedMaxSpeedMs": 108,
+      "averageInitialAccelerationMs2": 34.96,
+      "averageDriftChargePerRace": 8.534,
+      "abilityActivations": 0,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X09",
+      "name": "SPECTER",
+      "price": 0,
+      "playerStarts": 250,
+      "playerWins": 248,
+      "playerWinRatePct": 99.2,
+      "playerAverageFinishSeconds": 436.33,
+      "playerWinRateByDifficulty": {
+        "normal": {
+          "starts": 150,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 444.53
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 399.56
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 440.48
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 84.62,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 392.65
+        }
+      },
+      "fieldStarts": 6295,
+      "fieldWins": 344,
+      "fieldWinRatePct": 5.46,
+      "fieldAverageFinishSeconds": 489.56,
+      "observedMaxSpeedMs": 109.62,
+      "averageInitialAccelerationMs2": 33.49,
+      "averageDriftChargePerRace": 11.601,
+      "abilityActivations": 0,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X10",
+      "name": "SOLARIS",
+      "price": 0,
+      "playerStarts": 250,
+      "playerWins": 232,
+      "playerWinRatePct": 92.8,
+      "playerAverageFinishSeconds": 467.13,
+      "playerWinRateByDifficulty": {
+        "normal": {
+          "starts": 150,
+          "winRatePct": 95.33,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 452.09
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 91.94,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 478.16
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 486.32
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 53.85,
+          "podiumRatePct": 92.31,
+          "averageFinishSeconds": 551.15
+        }
+      },
+      "fieldStarts": 6228,
+      "fieldWins": 255,
+      "fieldWinRatePct": 4.09,
+      "fieldAverageFinishSeconds": 492.83,
+      "observedMaxSpeedMs": 109.08,
+      "averageInitialAccelerationMs2": 33.86,
+      "averageDriftChargePerRace": 11.083,
+      "abilityActivations": 0,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X11",
+      "name": "STREET FALCON",
+      "price": 200,
+      "playerStarts": 250,
+      "playerWins": 248,
+      "playerWinRatePct": 99.2,
+      "playerAverageFinishSeconds": 479.08,
+      "playerWinRateByDifficulty": {
+        "hard": {
+          "starts": 62,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 466.88
+        },
+        "normal": {
+          "starts": 150,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 486.9
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 482.1
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 84.62,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 441.15
+        }
+      },
+      "fieldStarts": 6172,
+      "fieldWins": 328,
+      "fieldWinRatePct": 5.31,
+      "fieldAverageFinishSeconds": 481.32,
+      "observedMaxSpeedMs": 109.62,
+      "averageInitialAccelerationMs2": 37.79,
+      "averageDriftChargePerRace": 11.7,
+      "abilityActivations": 6172,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X12",
+      "name": "CORNER PHANTOM",
+      "price": 400,
+      "playerStarts": 250,
+      "playerWins": 50,
+      "playerWinRatePct": 20,
+      "playerAverageFinishSeconds": 483.08,
+      "playerWinRateByDifficulty": {
+        "hard": {
+          "starts": 62,
+          "winRatePct": 6.45,
+          "podiumRatePct": 70.97,
+          "averageFinishSeconds": 445.6
+        },
+        "normal": {
+          "starts": 150,
+          "winRatePct": 14,
+          "podiumRatePct": 80.67,
+          "averageFinishSeconds": 515.12
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 0,
+          "podiumRatePct": 23.08,
+          "averageFinishSeconds": 342.46
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 456.88
+        }
+      },
+      "fieldStarts": 6345,
+      "fieldWins": 50,
+      "fieldWinRatePct": 0.79,
+      "fieldAverageFinishSeconds": 495.82,
+      "observedMaxSpeedMs": 106.92,
+      "averageInitialAccelerationMs2": 33.59,
+      "averageDriftChargePerRace": 8.313,
+      "abilityActivations": 6345,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X13",
+      "name": "DRIFT VIPER",
+      "price": 650,
+      "playerStarts": 250,
+      "playerWins": 214,
+      "playerWinRatePct": 85.6,
+      "playerAverageFinishSeconds": 482.17,
+      "playerWinRateByDifficulty": {
+        "hard": {
+          "starts": 62,
+          "winRatePct": 83.87,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 495.23
+        },
+        "normal": {
+          "starts": 150,
+          "winRatePct": 88.67,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 495.41
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 432.64
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 30.77,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 362.38
+        }
+      },
+      "fieldStarts": 6202,
+      "fieldWins": 251,
+      "fieldWinRatePct": 4.05,
+      "fieldAverageFinishSeconds": 489.32,
+      "observedMaxSpeedMs": 107.85,
+      "averageInitialAccelerationMs2": 33.79,
+      "averageDriftChargePerRace": 12.128,
+      "abilityActivations": 161301,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X14",
+      "name": "TURBO LYNX",
+      "price": 900,
+      "playerStarts": 250,
+      "playerWins": 247,
+      "playerWinRatePct": 98.8,
+      "playerAverageFinishSeconds": 489.55,
+      "playerWinRateByDifficulty": {
+        "normal": {
+          "starts": 150,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 474.54
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 98.39,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 536.93
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 451.1
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 84.62,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 510.69
+        }
+      },
+      "fieldStarts": 6272,
+      "fieldWins": 299,
+      "fieldWinRatePct": 4.77,
+      "fieldAverageFinishSeconds": 485.75,
+      "observedMaxSpeedMs": 109.2,
+      "averageInitialAccelerationMs2": 34.19,
+      "averageDriftChargePerRace": 11.307,
+      "abilityActivations": 132745,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X15",
+      "name": "AERO SPECTER",
+      "price": 1100,
+      "playerStarts": 250,
+      "playerWins": 247,
+      "playerWinRatePct": 98.8,
+      "playerAverageFinishSeconds": 490.99,
+      "playerWinRateByDifficulty": {
+        "normal": {
+          "starts": 150,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 484.22
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 485.85
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 488.1
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 76.92,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 599.23
+        }
+      },
+      "fieldStarts": 6178,
+      "fieldWins": 247,
+      "fieldWinRatePct": 4,
+      "fieldAverageFinishSeconds": 494.03,
+      "observedMaxSpeedMs": 113.91,
+      "averageInitialAccelerationMs2": 31.83,
+      "averageDriftChargePerRace": 12.014,
+      "abilityActivations": 6178,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X16",
+      "name": "NITRO REAPER",
+      "price": 1300,
+      "playerStarts": 250,
+      "playerWins": 227,
+      "playerWinRatePct": 90.8,
+      "playerAverageFinishSeconds": 461.83,
+      "playerWinRateByDifficulty": {
+        "normal": {
+          "starts": 150,
+          "winRatePct": 95.33,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 456.57
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 23.08,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 332.54
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 90.32,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 500.7
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 464.22
+        }
+      },
+      "fieldStarts": 6214,
+      "fieldWins": 243,
+      "fieldWinRatePct": 3.91,
+      "fieldAverageFinishSeconds": 485.35,
+      "observedMaxSpeedMs": 109.08,
+      "averageInitialAccelerationMs2": 34.94,
+      "averageDriftChargePerRace": 10.547,
+      "abilityActivations": 6214,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X17",
+      "name": "PHANTOM RX",
+      "price": 1500,
+      "playerStarts": 250,
+      "playerWins": 213,
+      "playerWinRatePct": 85.2,
+      "playerAverageFinishSeconds": 508.53,
+      "playerWinRateByDifficulty": {
+        "normal": {
+          "starts": 150,
+          "winRatePct": 90.67,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 505.87
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 75.81,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 516.98
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 504.48
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 38.46,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 506.73
+        }
+      },
+      "fieldStarts": 6179,
+      "fieldWins": 213,
+      "fieldWinRatePct": 3.45,
+      "fieldAverageFinishSeconds": 489.2,
+      "observedMaxSpeedMs": 108.81,
+      "averageInitialAccelerationMs2": 34.51,
+      "averageDriftChargePerRace": 10.363,
+      "abilityActivations": 153835,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X18",
+      "name": "THUNDER GT",
+      "price": 1700,
+      "playerStarts": 250,
+      "playerWins": 250,
+      "playerWinRatePct": 100,
+      "playerAverageFinishSeconds": 463.68,
+      "playerWinRateByDifficulty": {
+        "expert": {
+          "starts": 13,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 512.5
+        },
+        "hard": {
+          "starts": 62,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 476.61
+        },
+        "normal": {
+          "starts": 150,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 455.47
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 455.48
+        }
+      },
+      "fieldStarts": 6235,
+      "fieldWins": 565,
+      "fieldWinRatePct": 9.06,
+      "fieldAverageFinishSeconds": 485.29,
+      "observedMaxSpeedMs": 108.39,
+      "averageInitialAccelerationMs2": 34.51,
+      "averageDriftChargePerRace": 13.626,
+      "abilityActivations": 6235,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X19",
+      "name": "INFERNO X",
+      "price": 1850,
+      "playerStarts": 250,
+      "playerWins": 231,
+      "playerWinRatePct": 92.4,
+      "playerAverageFinishSeconds": 463.2,
+      "playerWinRateByDifficulty": {
+        "hard": {
+          "starts": 62,
+          "winRatePct": 91.94,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 453.54
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 76.92,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 554.35
+        },
+        "normal": {
+          "starts": 150,
+          "winRatePct": 92.67,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 468.73
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 406.58
+        }
+      },
+      "fieldStarts": 6242,
+      "fieldWins": 261,
+      "fieldWinRatePct": 4.18,
+      "fieldAverageFinishSeconds": 487.64,
+      "observedMaxSpeedMs": 109.08,
+      "averageInitialAccelerationMs2": 34.25,
+      "averageDriftChargePerRace": 12.335,
+      "abilityActivations": 161117,
+      "timeouts": 0
+    },
+    {
+      "id": "UR-X20",
+      "name": "PHANTOM OVERLORD",
+      "price": 2000,
+      "playerStarts": 250,
+      "playerWins": 230,
+      "playerWinRatePct": 92,
+      "playerAverageFinishSeconds": 453.36,
+      "playerWinRateByDifficulty": {
+        "hard": {
+          "starts": 62,
+          "winRatePct": 91.94,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 498.7
+        },
+        "normal": {
+          "starts": 150,
+          "winRatePct": 95.33,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 433.38
+        },
+        "easy": {
+          "starts": 25,
+          "winRatePct": 100,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 438.78
+        },
+        "expert": {
+          "starts": 13,
+          "winRatePct": 38.46,
+          "podiumRatePct": 100,
+          "averageFinishSeconds": 495.65
+        }
+      },
+      "fieldStarts": 6264,
+      "fieldWins": 235,
+      "fieldWinRatePct": 3.75,
+      "fieldAverageFinishSeconds": 492.73,
+      "observedMaxSpeedMs": 108,
+      "averageInitialAccelerationMs2": 34.22,
+      "averageDriftChargePerRace": 10.74,
+      "abilityActivations": 6264,
+      "timeouts": 0
+    }
+  ],
+  "abilityActivations": {
+    "corner-phantom": 6345,
+    "inferno-x": 161117,
+    "thunder-gt": 6235,
+    "nitro-reaper": 6214,
+    "aero-specter": 6178,
+    "turbo-lynx": 132745,
+    "phantom-overlord": 6264,
+    "street-falcon": 6172,
+    "drift-viper": 161301,
+    "phantom-rx": 153835
+  },
+  "caveats": [
+    "This is a real execution of 5,000 deterministic headless race simulations, but it is a reduced kinematic balance model, not a full browser/Three.js game session.",
+    "The model reads the 2.0.0 production car profiles, difficulty speed factors and special-ability configuration and mirrors player/AI ability branches. It does not reproduce Easy-mode lane-yield decisions, detailed lane changes, model-mesh contacts, mountains/props, guardrail mesh impacts, rendering, sound or persistent UI.",
+    "Special-ability activation totals count first passive/trigger events per car per race and repeatable turbo / drift-exit activations where applicable; they are not frame counts.",
+    "Every player vehicle receives exactly 250 starts: 25 easy, 150 normal, 62 hard and 13 expert. The player car/difficulty schedule is balanced and then deterministically shuffled to avoid car/difficulty sampling bias.",
+    "AI rivals use the same deterministic per-index variation range (.975–1.023) assigned by the production makeAICar constructor. The player has no hidden AI variation and is simulated with an assisted racing line and strategic nitro on straights; actual manual player outcomes can differ."
+  ]
+}
